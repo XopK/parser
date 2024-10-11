@@ -13,7 +13,10 @@ if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
 # Укажите путь к Microsoft Edge WebDriver
-driver_path = r".\driver\msedgedriver.exe"
+if getattr(sys, 'frozen', False):  # Если программа запущена как .exe
+    driver_path = os.path.join(sys._MEIPASS, 'driver', 'msedgedriver.exe')
+else:  # Если программа запущена как обычный скрипт
+    driver_path = r"driver\msedgedriver.exe"
 
 # Создаем объект Service для EdgeDriver
 service = Service(executable_path=driver_path)
