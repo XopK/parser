@@ -27,7 +27,7 @@
    Убедитесь, что путь к WebDriver (`msedgedriver.exe`) корректно указан в переменной `driver_path` в коде:
 
    ```python
-   driver_path = r".\driver\msedgedriver.exe"
+   driver_path = r"driver\msedgedriver.exe"
 
 2. Путь к папке для сохранения файлов:
    Файлы Excel будут сохраняться в папку `output`. Если такой папки нет, она будет создана автоматически. Если нужно
